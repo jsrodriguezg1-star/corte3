@@ -16,6 +16,19 @@ npm run check
 npm run build
 ```
 
+## CI/CD
+
+El repositorio incluye dos workflows de GitHub Actions:
+
+- `CI`: instala dependencias, ejecuta `npm run check` y valida el build en cada `push` a `main` y en cada `pull_request`.
+- `Deploy to GitHub Pages`: compila el sitio estatico y lo publica en GitHub Pages cuando hay cambios en `main`.
+
+Para activar el despliegue:
+
+1. En GitHub entra a `Settings > Pages`.
+2. En `Source`, selecciona `GitHub Actions`.
+3. Haz push a `main` y el workflow publicara el sitio automaticamente.
+
 ## Estructura
 
 - `src/lib/core`: cliente HTTP, configuracion y adaptadores.
